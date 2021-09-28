@@ -1,0 +1,16 @@
+config:
+    rocketmq:
+        boardTopic: board_topic
+        boardTopicTag: common
+
+rocketmq:
+    name-server: localhost:9876
+    consumer:
+        group: my-group1
+    producer:
+        access-key: AK
+        group: my-group1
+        secret-key: SK
+
+server:
+    port: 9966

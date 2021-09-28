@@ -1,0 +1,22 @@
+# properties used in application code
+config:
+    boardMessageCreateUrl: http://localhost:8000/mq/board/message
+    rocketmq:
+        boardTopic: board_topic
+
+rocketmq:
+    name-server: localhost:9876
+    consumer:
+        access-key: AK
+        group: my-group1
+        secret-key: SK
+    producer:
+        group: my-group1
+
+spring:
+    batch:
+        job:
+            enabled: false
+
+server:
+    port: 9977
