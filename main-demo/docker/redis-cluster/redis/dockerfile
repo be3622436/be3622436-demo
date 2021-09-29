@@ -1,0 +1,4 @@
+FROM redis:6.0.3
+MAINTAINER Krace <be3622436@gmail.com>
+COPY rediscluster.conf /etc/redis/rediscluster.conf
+ENTRYPOINT redis-server /etc/redis/rediscluster.conf
