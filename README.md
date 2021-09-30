@@ -18,7 +18,7 @@
 
 # Directory Structure
 ```
-project
+project root
 └───lib (third-party .jar)
 │
 └───main-demo (spring boot project)
@@ -35,7 +35,7 @@ project
 │
 └───rocket-demo-producer (spring boot project)
 │
-└───rocket-spring-boot (offer by apache offical, only for module import)
+└───rocket-spring-boot (offer by apache official, only for module import)
 │
 └───spring-cloud-config-server (spring boot project)
 ```
@@ -74,7 +74,7 @@ project
     - Minimal RocketMQ `Nameserver` x 1, `Broker` x 1, `rmqconsole` monitor dashboard
     - Minimal Redis-Cluster `Node` x 3, `Replic` x 2 in every node
 
-# TODO:
+# Todo:
 - Topic
   - Swagger - build Restful API Documents
   - MongoDB - implement a datasource
