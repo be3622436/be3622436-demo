@@ -1,3 +1,5 @@
+CREATE SCHEMA `krace_demo` ;
+
 CREATE TABLE `board` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `postUserId` bigint NOT NULL,
@@ -6,7 +8,6 @@ CREATE TABLE `board` (
   `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 
 CREATE TABLE `users` (
   `id` bigint NOT NULL AUTO_INCREMENT,

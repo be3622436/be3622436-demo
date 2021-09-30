@@ -1,0 +1,13 @@
+server:
+  port: 9911
+
+spring:
+  application:
+    name: krace-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/be3622436/spring-cloud-config-git-repository
+#          # local git repository
+#          uri: file:///C:/Users/user/IdeaProjects/spring-cloud-config-git-repository

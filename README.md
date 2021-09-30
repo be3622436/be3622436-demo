@@ -68,7 +68,7 @@ project
 - Environment
   - Docker containerize
     - Minimal RocketMQ `Nameserver` x 1, `Broker` x 1, `rmqconsole`
-    - Minimal Redis-Cluster `Node` * 3, `Replic` * 2 in every node
+    - Minimal Redis-Cluster `Node` x 3, `Replic` x 2 in every node
 
 # TODO:
 - redisson-mybatis-cache

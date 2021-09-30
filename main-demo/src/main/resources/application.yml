@@ -2,12 +2,18 @@ server:
   port: 8000
 
 spring:
+  application:
+    name: main-demo
+  config:
+    import: optional:configserver:http://localhost:9911
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/krace_demo?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
     username: root
     password: root
 
+  # TODO: wait to implement
   data:
     mongodb:
       uri: mongodb://localhost:27017/test
@@ -33,3 +39,10 @@ mybatis:
   type-aliases-package: com.example.kracedemo.entity
   configuration:
     cache-enabled: true
+
+# for actuator/refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

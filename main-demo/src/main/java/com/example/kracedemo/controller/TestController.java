@@ -6,6 +6,7 @@ import org.redisson.Redisson;
 import org.redisson.api.RMap;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -16,6 +17,17 @@ import java.util.Map;
 
 @RestController
 public class TestController {
+  // parameter from spring-cloud-config-git-repository
+  @Value("${secret-message}")
+  private String secretMessage;
+
+  @ResponseBody
+  @GetMapping(value = {"/cloud-config/secret-message"})
+  public String getSecretMessage() {
+    return secretMessage;
+  }
+
+
   @ResponseBody
   @PostMapping(value = {"/json-test"})
   public Object postJsonTest(@RequestBody TestJsonEntity json) {

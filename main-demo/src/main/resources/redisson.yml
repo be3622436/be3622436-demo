@@ -33,9 +33,3 @@ threads: 16
 nettyThreads: 32
 codec: !<org.redisson.codec.MarshallingCodec> {}
 transportMode: "NIO"
-
-#RedissonCache:
-#  timeToLive: 200000
-#  maxIdleTime: 100000
-#  maxSize: 100000
-#  redissonConfig: redisson.yml
