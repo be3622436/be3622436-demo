@@ -1,38 +1,29 @@
 package com.example.kracedemo.entity;
 
 public class TestJsonEntity {
-    private Long id;
-    private String username;
-    private String password;
+  private String key;
+  private String value;
 
-    public TestJsonEntity() {}
+  public TestJsonEntity() {}
 
-    public TestJsonEntity(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
+  public TestJsonEntity(String key, String value) {
+    this.key = key;
+    this.value = value;
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public String geKey() {
+    return key;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public void setKey(String key) {
+    this.key = key;
+  }
 
-    public String getUsername() {
-        return username;
-    }
+  public String getValue() {
+    return value;
+  }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+  public void setValue(String value) {
+    this.value = value;
+  }
 }
