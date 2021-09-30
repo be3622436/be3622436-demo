@@ -1,6 +1,6 @@
 # be3622436-demo
-spring boot with third-party tech demo
-
+- spring boot with third-party tech demo
+- 中文說明待後續補上
 # Tech Stack
 - Server Framework
   - Spring Boot
@@ -23,17 +23,21 @@ project
 │
 └───main-demo (spring boot project)
 │   │
-│   └───docker (environment docker file)
-│       │
-│       └───redis-cluster 
-│       │
-│       └───rocketmq
-│   
+│   └───docker (environment docker file, minimize to develop)
+│   │   │
+│   │   └───redis-cluster 
+│   │   │
+│   │   └───rocketmq
+│   │
+│   └───sql (mysql schema to init)
+│
 └───rocket-demo-consumer (spring boot project)
 │
 └───rocket-demo-producer (spring boot project)
 │
 └───rocket-spring-boot (offer by apache offical, only for module import)
+│
+└───spring-cloud-config-server (spring boot project)
 ```
 
 # Done:
@@ -49,6 +53,7 @@ project
   - Interceptor
     - ex: Login session status check
 - Error Handle
+  - Exception custom defined 
   - Controller level
     - `ControllerAdvice`, `ResponseEntityExceptionHandler`
   - Global level
@@ -63,13 +68,20 @@ project
     - Producer
       - ex: Produce simple message to Broker
     - Consumer
-      - ex: Consume simple message from Broker
-        
+      - ex: Consume simple message from Broker       
 - Environment
   - Docker containerize
-    - Minimal RocketMQ `Nameserver` x 1, `Broker` x 1, `rmqconsole`
+    - Minimal RocketMQ `Nameserver` x 1, `Broker` x 1, `rmqconsole` monitor dashboard
     - Minimal Redis-Cluster `Node` x 3, `Replic` x 2 in every node
 
 # TODO:
-- redisson-mybatis-cache
-https://github.com/redisson/redisson/tree/master/redisson-mybatis
+- Topic
+  - Swagger - build Restful API Documents
+  - MongoDB - implement a datasource
+  - Test - build unittest, integrate-test
+  - Other - poi, dom4j simple demo
+- Deeper Research
+  - Distributed and scalable microservice design
+  - Data stable consistency and high availability 
+- Other 
+  - Third-party package detailed functions study
