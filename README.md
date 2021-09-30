@@ -1,4 +1,4 @@
-# be3622436-demo
+# Krace-demo
 - spring boot with third-party tech demo
 - 中文說明待後續補上
 # Tech Stack
