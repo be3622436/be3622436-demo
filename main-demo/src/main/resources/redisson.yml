@@ -1,8 +1,3 @@
-#spring:
-#  redis:
-#    redisson:
-#      file: classpath:redisson.yaml
-#      config:
 clusterServersConfig:
   idleConnectionTimeout: 10000
   connectTimeout: 10000
@@ -24,12 +19,12 @@ clusterServersConfig:
   readMode: "SLAVE"
   subscriptionMode: "SLAVE"
   nodeAddresses:
-  - "redis://127.0.0.1:7000"
-#  - "redis://127.0.0.1:7001"
-#  - "redis://127.0.0.1:7002"
-#  - "redis://127.0.0.1:7003"
-#  - "redis://127.0.0.1:7004"
-#  - "redis://127.0.0.1:7005"
+  - "redis://localhost:7000"
+  - "redis://localhost:7001"
+  - "redis://localhost:7002"
+  - "redis://localhost:7003"
+  - "redis://localhost:7004"
+  - "redis://localhost:7005"
   scanInterval: 1000
   pingConnectionInterval: 0
   keepAlive: false
@@ -38,3 +33,9 @@ threads: 16
 nettyThreads: 32
 codec: !<org.redisson.codec.MarshallingCodec> {}
 transportMode: "NIO"
+
+#RedissonCache:
+#  timeToLive: 200000
+#  maxIdleTime: 100000
+#  maxSize: 100000
+#  redissonConfig: redisson.yml

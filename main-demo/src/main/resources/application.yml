@@ -31,3 +31,5 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.example.kracedemo.entity
+  configuration:
+    cache-enabled: true

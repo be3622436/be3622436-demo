@@ -35,6 +35,11 @@
             <version>3.16.1</version>
         </dependency>
 <!--        <dependency>-->
+<!--             <groupId>org.redisson</groupId>-->
+<!--             <artifactId>redisson-mybatis</artifactId>-->
+<!--             <version>3.16.1</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
 <!--            <groupId>org.springframework.cloud</groupId>-->
 <!--            <artifactId>spring-cloud-starter-config</artifactId>-->
 <!--        </dependency>-->
