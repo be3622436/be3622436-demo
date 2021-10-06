@@ -104,17 +104,29 @@ project root / 專案根目錄
 
 # TODO / 待實作
 
-- Topic / 主題
-    - Swagger - build RESTful API Documents / 使用Swagger建立API文件
-    - MongoDB - implement a datasource / 實作MongoDB數據讀寫
-    - Test - build unittest, integrate-test / 建立單元、整合測試
-    - Other - poi, dom4j simple demo / 第三方套件簡易實作
-- Deeper Research / 深入探索
-    - Distributed and scalable microservice design / 分散式及高擴展性的微服務設計
-    - Data stable consistency and high availability / 數據操作的一致性和高可用性
-- Other / 其他
-    - Spring framework tech and concept study / Spring框架的技術及概念研究
-    - Third-party package detailed functions study / 第三方套件的細節摸索
+- Topic
+    - Swagger - build RESTful API Documents
+    - MongoDB - implement a datasource
+    - Test - build unittest, integrate-test
+    - Other - poi, dom4j simple demo
+- Deeper Research
+    - Distributed and scalable microservice design
+    - Data stable consistency and high availability
+- Other
+    - Spring framework tech and concept study
+    - Third-party package detailed functions study
+
+- 主題
+    - 使用Swagger建立API文件
+    - 實作MongoDB數據讀寫
+    - 建立單元、整合測試
+    - 第三方套件簡易實作
+- 深入探索
+    - 分散式及高擴展性的微服務設計
+    - 數據操作的一致性和高可用性
+- 其他
+    - Spring框架的技術及概念研究
+    - 第三方套件的細節摸索
 
 ---
   
