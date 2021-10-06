@@ -4,6 +4,11 @@ public class BoardMessageRequest {
     private Long postUserId;
     private String message;
 
+    public BoardMessageRequest(Long userId, String msg) {
+        postUserId = userId;
+        message = msg;
+    }
+
     public Long getPostUserId() {
         return postUserId;
     }
