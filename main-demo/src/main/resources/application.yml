@@ -5,6 +5,24 @@ spring:
   application:
     name: main-demo
 
+  security:
+    user:
+      name: krace
+      password: krace-password
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:8010
+        instance:
+          metadata:
+            # To connect to the client
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
+        # Credentials to authenticate with the Admin Server
+        username: admin
+        password: admin-password
+
   main:
     allow-bean-definition-overriding: true
 
@@ -48,12 +66,17 @@ mybatis:
   configuration:
     cache-enabled: true
 
-# for actuator/refresh
 management:
   endpoints:
     web:
       exposure:
-        include: refresh
+        # allow endpoints
+        # 1. actuator/refresh,
+        # 2. admin-server monitor
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 
 springdoc:
   swagger-ui:
