@@ -10,9 +10,9 @@ CREATE TABLE `board` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `users` (
-  `id` bigint NOT NULL AUTO_INCREMENT,
-  `username` char(100) NOT NULL,
-  `password` char(100) NOT NULL,
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'PK',
+  `username` char(64) NOT NULL COMMENT 'username',
+  `password` char(128) NOT NULL COMMENT 'password',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username_UNIQUE` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -15,7 +15,7 @@ import java.util.Map;
 
 // TODO:
 @ControllerAdvice
-public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
+public class GlobalControllerExceptionHandler extends ResponseEntityExceptionHandler {
 
   public static final String TRACE = "trace";
 

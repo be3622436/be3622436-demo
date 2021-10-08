@@ -5,7 +5,6 @@ import com.example.kracedemo.entity.BoardMessageRequest;
 import com.example.kracedemo.entity.Response;
 import com.example.kracedemo.entity.User;
 import com.example.kracedemo.service.BoardService;
-import com.example.kracedemo.utility.SessionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;

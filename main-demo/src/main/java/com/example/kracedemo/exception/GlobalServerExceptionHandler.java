@@ -18,10 +18,10 @@ import java.util.Map;
  * handle global exception exclude controller's exception
  */
 @Component
-public class GlobalExceptionHandler extends AbstractHandlerExceptionResolver {
+public class GlobalServerExceptionHandler extends AbstractHandlerExceptionResolver {
 
   private static final Logger logger =
-      LoggerFactory.getLogger(GlobalExceptionHandler.class);
+      LoggerFactory.getLogger(GlobalServerExceptionHandler.class);
 
   @Override
   protected ModelAndView doResolveException(
