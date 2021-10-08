@@ -1,7 +1,7 @@
 package com.example.kracedemo.controller.mq;
 
 import com.example.kracedemo.entity.Response;
-import com.example.kracedemo.entity.BoardMessage;
+import com.example.kracedemo.entity.mysql.BoardMessage;
 import com.example.kracedemo.entity.BoardMessageRequest;
 import com.example.kracedemo.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;

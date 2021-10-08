@@ -1,7 +1,7 @@
 package com.example.kracedemo.controller.user;
 
 import com.example.kracedemo.entity.Response;
-import com.example.kracedemo.entity.User;
+import com.example.kracedemo.entity.mysql.User;
 import com.example.kracedemo.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

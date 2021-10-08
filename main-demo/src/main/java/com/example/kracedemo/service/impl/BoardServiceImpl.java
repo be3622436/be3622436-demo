@@ -1,6 +1,6 @@
 package com.example.kracedemo.service.impl;
 
-import com.example.kracedemo.entity.BoardMessage;
+import com.example.kracedemo.entity.mysql.BoardMessage;
 import com.example.kracedemo.mapper.BoardMapper;
 import com.example.kracedemo.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.example.kracedemo.service;
 
-import com.example.kracedemo.entity.BoardMessage;
+import com.example.kracedemo.entity.mysql.BoardMessage;
 
 import java.util.Date;
 import java.util.List;

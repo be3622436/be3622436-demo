@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.kracedemo.mapper.BoardMapper">
-    <select id="findByDatetime" resultType="com.example.kracedemo.entity.BoardMessage">
+    <select id="findByDatetime" resultType="com.example.kracedemo.entity.mysql.BoardMessage">
         SELECT * FROM board WHERE createdAt BETWEEN #{startDate} AND #{endDate}
     </select>
 
-    <select id="findAll" resultType="com.example.kracedemo.entity.BoardMessage">
+    <select id="findAll" resultType="com.example.kracedemo.entity.mysql.BoardMessage">
         SELECT * FROM board
     </select>
 
-    <select id="findById" resultType="com.example.kracedemo.entity.BoardMessage" parameterType="Long">
+    <select id="findById" resultType="com.example.kracedemo.entity.mysql.BoardMessage" parameterType="Long">
         SELECT * FROM board WHERE id = #{id}
     </select>
 
-    <insert id="create" parameterType="com.example.kracedemo.entity.BoardMessage">
+    <insert id="create" parameterType="com.example.kracedemo.entity.mysql.BoardMessage">
         INSERT INTO board(postUserId, message) VALUES (#{postUserId}, #{message});
         SELECT LAST_INSERT_ID();
     </insert>
@@ -22,7 +22,7 @@
         DELETE FROM board WHERE id = #{id}
     </delete>
 
-    <update id="update" parameterType="com.example.kracedemo.entity.BoardMessage">
+    <update id="update" parameterType="com.example.kracedemo.entity.mysql.BoardMessage">
         UPDATE board SET WHERE 1=1
         <if test="message != null">
             message = #{message},

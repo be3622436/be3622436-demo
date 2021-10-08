@@ -1,4 +1,4 @@
-package com.example.kracedemo.entity;
+package com.example.kracedemo.entity.mysql;
 
 import java.io.Serializable;
 import java.util.Date;

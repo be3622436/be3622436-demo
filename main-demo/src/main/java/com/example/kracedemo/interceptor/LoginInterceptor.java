@@ -1,11 +1,9 @@
 package com.example.kracedemo.interceptor;
 
-import com.example.kracedemo.entity.User;
+import com.example.kracedemo.entity.mysql.User;
 import com.example.kracedemo.exception.common.NotLoginAccessException;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;

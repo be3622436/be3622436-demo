@@ -1,6 +1,6 @@
 package com.example.kracedemo.service.impl;
 
-import com.example.kracedemo.entity.User;
+import com.example.kracedemo.entity.mysql.User;
 import com.example.kracedemo.mapper.UserMapper;
 import com.example.kracedemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

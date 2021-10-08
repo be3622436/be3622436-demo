@@ -1,6 +1,6 @@
 package com.example.kracedemo.mapper;
 
-import com.example.kracedemo.entity.BoardMessage;
+import com.example.kracedemo.entity.mysql.BoardMessage;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.example.kracedemo.entity;
+package com.example.kracedemo.entity.mysql;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;

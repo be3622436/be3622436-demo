@@ -1,6 +1,6 @@
 package com.example.kracedemo.mapper;
 
-import com.example.kracedemo.entity.User;
+import com.example.kracedemo.entity.mysql.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

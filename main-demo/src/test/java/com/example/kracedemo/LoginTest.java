@@ -2,7 +2,7 @@ package com.example.kracedemo;
 
 import com.example.kracedemo.controller.LoginController;
 import com.example.kracedemo.entity.Response;
-import com.example.kracedemo.entity.User;
+import com.example.kracedemo.entity.mysql.User;
 import com.example.kracedemo.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;

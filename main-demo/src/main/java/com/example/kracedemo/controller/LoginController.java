@@ -1,7 +1,7 @@
 package com.example.kracedemo.controller;
 
 import com.example.kracedemo.entity.Response;
-import com.example.kracedemo.entity.User;
+import com.example.kracedemo.entity.mysql.User;
 import com.example.kracedemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

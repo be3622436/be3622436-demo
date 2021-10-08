@@ -1,9 +1,9 @@
 package com.example.kracedemo.controller.board;
 
-import com.example.kracedemo.entity.BoardMessage;
+import com.example.kracedemo.entity.mysql.BoardMessage;
 import com.example.kracedemo.entity.BoardMessageRequest;
 import com.example.kracedemo.entity.Response;
-import com.example.kracedemo.entity.User;
+import com.example.kracedemo.entity.mysql.User;
 import com.example.kracedemo.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

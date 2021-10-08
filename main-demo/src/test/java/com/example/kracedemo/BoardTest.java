@@ -1,25 +1,15 @@
 package com.example.kracedemo;
 
 import com.example.kracedemo.controller.board.BoardController;
-import com.example.kracedemo.entity.BoardMessage;
-import com.example.kracedemo.entity.Response;
-import com.example.kracedemo.entity.User;
 import com.example.kracedemo.service.BoardService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 
-import java.util.HashMap;
-
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(BoardController.class)
 public class BoardTest {
