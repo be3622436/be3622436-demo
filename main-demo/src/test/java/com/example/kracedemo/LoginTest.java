@@ -38,12 +38,12 @@ public class LoginTest {
     loginTest(3L, "krace", "123", "123", 200, "already login", sessionAttr);
   }
 
-  @Test()
+  @Test
   public void loginWithWrongPasswordTest() throws Exception {
     loginTest(3L, "krace", "123", "456", 400, "incorrect password", null);
   }
 
-  @Test()
+  @Test
   public void loginWithCorrectPasswordTest() throws Exception {
     loginTest(3L, "krace", "123", "123", 200, "3", null);
   }

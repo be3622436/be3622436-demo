@@ -52,6 +52,8 @@ project root / 專案根目錄
     - Basic CRUD and data model define
     - User login and register function
     - Simple message board function
+    - Build Api Document by `Swagger`
+    - Build simple unit-test for LoginController
     - Http session data write and read in `redis-cluster`
     - Check User session login status by interceptor
     - Custom error defined and handle with global and controller scope
@@ -61,6 +63,8 @@ project root / 專案根目錄
     - 實作數據模型定義，和增刪查改
     - 使用者登入及註冊功能
     - 簡易留言板功能
+    - 使用`Swagger`建立API文件
+    - 撰寫登入控制器之單元測試
     - Http Session資料讀寫整合至`redis-cluster`
     - 使用攔截器來判斷使用者登入狀態
     - 自定義錯誤，全域、控制器區域之錯誤處理
@@ -91,6 +95,10 @@ project root / 專案根目錄
     - Redis-Cluster
         - Redisson
             - ex: Simple get and set data
+- Test
+    - Unit-test
+      - Login test without starting server
+        - ex: `WebMvcTest`, `MockBean`
 - Message Queue
     - RocketMQ
         - Producer
@@ -105,9 +113,8 @@ project root / 專案根目錄
 # TODO / 待實作
 
 - Topic
-    - Swagger - build RESTful API Documents
     - MongoDB - implement a datasource
-    - Test - build unittest, integrate-test
+    - Test - build integrate-test
     - Other - poi, dom4j simple demo
 - Deeper Research
     - Distributed and scalable microservice design
