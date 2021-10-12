@@ -9,7 +9,7 @@ CREATE TABLE `board` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE `users` (
+CREATE TABLE `user` (
   `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'PK',
   `username` char(64) NOT NULL COMMENT 'username',
   `password` char(128) NOT NULL COMMENT 'password',
