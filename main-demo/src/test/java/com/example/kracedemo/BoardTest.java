@@ -1,6 +1,6 @@
 package com.example.kracedemo;
 
-import com.example.kracedemo.controller.board.BoardController;
+import com.example.kracedemo.controller.api.v1.BoardController;
 import com.example.kracedemo.service.BoardService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;

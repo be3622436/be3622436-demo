@@ -1,4 +1,4 @@
-package com.example.kracedemo.controller.board;
+package com.example.kracedemo.controller.api.v1;
 
 import com.example.kracedemo.entity.mysql.BoardMessage;
 import com.example.kracedemo.entity.BoardMessageRequest;
@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/board")
+@RequestMapping("/api/v1/board")
 public class BoardController {
   @Autowired private BoardService boardService;
   @Autowired private HttpSession session;
@@ -73,9 +73,5 @@ public class BoardController {
     Date endDate = new Date();
     return boardService.findByDatetime(startDate, endDate);
   }
-  // view
-  @GetMapping(value = {"", "/"})
-  public ModelAndView page() {
-    return new ModelAndView("board/index");
-  }
+
 }

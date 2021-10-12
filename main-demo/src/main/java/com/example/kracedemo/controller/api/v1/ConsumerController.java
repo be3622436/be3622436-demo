@@ -1,4 +1,4 @@
-package com.example.kracedemo.controller.mq;
+package com.example.kracedemo.controller.api.v1;
 
 import com.example.kracedemo.entity.Response;
 import com.example.kracedemo.entity.mysql.BoardMessage;
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/mq")
+@RequestMapping("/api/v1/mq")
 public class ConsumerController {
   @Autowired private BoardService boardService;
 

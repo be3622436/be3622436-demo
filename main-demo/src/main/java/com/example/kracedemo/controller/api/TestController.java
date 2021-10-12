@@ -1,4 +1,4 @@
-package com.example.kracedemo.controller;
+package com.example.kracedemo.controller.api.v1;
 
 import com.example.kracedemo.entity.RedissonCache;
 import com.example.kracedemo.entity.Response;
@@ -23,6 +23,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @RestController
+@RequestMapping("/api/test")
 public class TestController {
     @Autowired
     private UserService userService;

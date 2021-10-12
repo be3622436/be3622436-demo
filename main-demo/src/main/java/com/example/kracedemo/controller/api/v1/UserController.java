@@ -1,4 +1,4 @@
-package com.example.kracedemo.controller.user;
+package com.example.kracedemo.controller.api.v1;
 
 import com.example.kracedemo.entity.Response;
 import com.example.kracedemo.entity.mysql.User;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/v1/user")
 public class UserController {
 
     @Autowired
