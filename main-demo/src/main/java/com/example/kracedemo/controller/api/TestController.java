@@ -1,4 +1,4 @@
-package com.example.kracedemo.controller.api.v1;
+package com.example.kracedemo.controller.api;
 
 import com.example.kracedemo.entity.RedissonCache;
 import com.example.kracedemo.entity.Response;
