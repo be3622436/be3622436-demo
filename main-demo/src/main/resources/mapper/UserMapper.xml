@@ -2,20 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.kracedemo.mapper.UserMapper">
     <select id="findAll" resultType="com.example.kracedemo.entity.mysql.User">
-        SELECT * FROM users
+        SELECT *
+        FROM users
     </select>
 
     <select id="findById" resultType="com.example.kracedemo.entity.mysql.User" parameterType="Long">
-        SELECT * FROM users WHERE id = #{id}
+        SELECT *
+        FROM users
+        WHERE id = #{id}
     </select>
 
     <insert id="create" parameterType="com.example.kracedemo.entity.mysql.User">
-        INSERT INTO users(username, password) VALUES (#{username}, #{password});
+        INSERT INTO users(username, password)
+        VALUES (#{username}, #{password});
         SELECT LAST_INSERT_ID();
     </insert>
 
+    <insert id="insertUserList" parameterType="java.util.List">
+        INSERT INTO users
+        (username, password)
+        VALUES
+        <foreach collection="list" item="user" index="index" separator=",">
+            (#{user.username}, #{user.password})
+        </foreach>
+    </insert>
+
     <delete id="delete" parameterType="Long">
-        DELETE FROM users WHERE id = #{id}
+        DELETE
+        FROM users
+        WHERE id = #{id}
     </delete>
 
     <update id="update" parameterType="com.example.kracedemo.entity.mysql.User">
@@ -30,6 +45,8 @@
     </update>
 
     <select id="findByName" parameterType="String" resultType="com.example.kracedemo.entity.mysql.User">
-        SELECT * FROM users WHERE username = #{username}
+        SELECT *
+        FROM users
+        WHERE username = #{username}
     </select>
 </mapper>

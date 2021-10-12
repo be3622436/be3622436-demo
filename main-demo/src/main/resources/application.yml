@@ -5,6 +5,7 @@ spring:
   application:
     name: main-demo
 
+  # check spring-boot-starter-security
   security:
     user:
       name: krace

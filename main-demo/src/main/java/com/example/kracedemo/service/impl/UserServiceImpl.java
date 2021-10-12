@@ -10,37 +10,43 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
-  @Autowired private UserMapper userMapper;
+    @Autowired
+    private UserMapper userMapper;
 
-  @Override
-  public List<User> findAll() {
-    return userMapper.findAll();
-  }
-
-  @Override
-  public User findById(Long id) {
-    return userMapper.findById(id);
-  }
-
-  @Override
-  public Long create(User user) {
-    return userMapper.create(user);
-  }
-
-  @Override
-  public void delete(Long... ids) {
-    for (Long id : ids) {
-      userMapper.delete(id);
+    @Override
+    public List<User> findAll() {
+        return userMapper.findAll();
     }
-  }
 
-  @Override
-  public void update(User user) {
-    userMapper.update(user);
-  }
+    @Override
+    public User findById(Long id) {
+        return userMapper.findById(id);
+    }
 
-  @Override
-  public User findByName(String name) {
-    return userMapper.findByName(name);
-  }
+    @Override
+    public Long create(User user) {
+        return userMapper.create(user);
+    }
+
+    @Override
+    public void insertUserList(List<User> userList) {
+        userMapper.insertUserList(userList);
+    }
+
+    @Override
+    public void delete(Long... ids) {
+        for (Long id : ids) {
+            userMapper.delete(id);
+        }
+    }
+
+    @Override
+    public void update(User user) {
+        userMapper.update(user);
+    }
+
+    @Override
+    public User findByName(String name) {
+        return userMapper.findByName(name);
+    }
 }

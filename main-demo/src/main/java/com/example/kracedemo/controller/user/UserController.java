@@ -12,7 +12,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/user")
@@ -54,4 +56,17 @@ public class UserController {
         return new Response(200, message);
     }
 
+    @ResponseBody
+    @PostMapping("/generateRandomUsers/{count}")
+    public Response generateRandomUsers(@PathVariable long count) {
+        List<User> userList = new ArrayList<>();
+        for (int i = 0; i < count; i++) {
+            String randUsername = UUID.randomUUID().toString().replace("-", "");
+            String randPassword = UUID.randomUUID().toString().replace("-", "");
+            User user = new User(randUsername, randPassword);
+            userList.add(user);
+        }
+        userService.insertUserList(userList);
+        return new Response(200, "generateRandomUsers success");
+    }
 }

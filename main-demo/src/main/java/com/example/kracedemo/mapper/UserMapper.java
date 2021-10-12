@@ -14,6 +14,8 @@ public interface UserMapper {
 
     Long create(User user);
 
+    void insertUserList(List<User> userList);
+
     void delete(Long id);
 
     void update(User user);
