@@ -62,6 +62,7 @@ project root / 專案根目錄
     - Insert message to board via `RocketMQ` producer and consumer
     - Implement cloud config update and read via config server and remote `git` repository
     - Simple admin-server and admin-client function
+    - Secure with JWT and user role privilege
 - 簡述
     - 實作數據模型定義，和增刪查改
     - 使用者登入及註冊功能
@@ -74,6 +75,7 @@ project root / 專案根目錄
     - 由`RocketMQ`生產者、消費者方式來處理留言板訊息插入至資料庫
     - 藉由遠端`git`倉儲庫來實作雲端設定檔參數更新及讀取
     - 簡易監控管理服務端和客戶端功能
+    - 藉由JWT和角色權限實作資安防護
 
 # Done / 已實作
 
@@ -84,7 +86,9 @@ project root / 專案根目錄
             - ex: User account register
 - Data Model
     - MyBaits + Mysql
-        - ex: Entity `User` mapping with mysql table `users`
+      - ex: Entity `User` mapping with mysql table `users`
+    - MongoDB - https://github.com/be3622436/spring-boot-security-jwt
+      - ex: `UserRepository` implement by `MongoRepository`
 - AOP
     - Interceptor
         - ex: Login session status check
@@ -109,17 +113,21 @@ project root / 專案根目錄
             - ex: Produce simple message to Broker
         - Consumer
             - ex: Consume simple message from Broker
+- Security - https://github.com/be3622436/spring-boot-security-jwt
+    - Authentication implement by `spring-boot-starter-security` package
+    - RESTful Authentication with JWT
 - Environment
     - Docker containerize
         - Minimal RocketMQ `Nameserver` x 1, `Broker` x 1, `rmqconsole` monitor dashboard
         - Minimal Redis-Cluster `Node` x 3, `Replic` x 2 in every node
+
 - Other
   - Spring-Boot-Admin
     - Simple admin-server and admin-client
+
 # TODO / 待實作
 
 - Topic
-    - MongoDB - implement a datasource
     - Test - build integrate-test
     - Other - poi, dom4j simple demo
 - Deeper Research
@@ -130,8 +138,6 @@ project root / 專案根目錄
     - Third-party package detailed functions study
 
 - 主題
-    - 使用Swagger建立API文件
-    - 實作MongoDB數據讀寫
     - 建立單元、整合測試
     - 第三方套件簡易實作
 - 深入探索

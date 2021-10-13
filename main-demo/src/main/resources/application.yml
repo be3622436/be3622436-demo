@@ -5,7 +5,7 @@ spring:
   application:
     name: main-demo
 
-  # check spring-boot-starter-security
+  # setting with maven dependency 'spring-boot-starter-security' and 'admin-server' project
   security:
     user:
       name: krace

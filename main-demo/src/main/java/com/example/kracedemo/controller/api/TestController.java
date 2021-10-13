@@ -1,9 +1,6 @@
 package com.example.kracedemo.controller.api;
 
-import com.example.kracedemo.entity.RedissonCache;
-import com.example.kracedemo.entity.Response;
 import com.example.kracedemo.entity.TestJsonEntity;
-import com.example.kracedemo.entity.mysql.User;
 import com.example.kracedemo.service.UserService;
 import org.redisson.Redisson;
 import org.redisson.api.RMap;
@@ -17,10 +14,7 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/test")
@@ -68,27 +62,6 @@ public class TestController {
         return value;
     }
 
-    //  TODO: not work
-    //  @PostMapping("/redis-test/cache")
-    //  public String postCacheToRedis(@RequestBody TestJsonEntity json) throws IOException {
-    //    RedissonCache cache = new RedissonCache("myCache");
-    //    cache.setRedissonConfig("redisson.xml");
-    //    String key = json.geKey();
-    //    String value = json.getValue();
-    //    cache.putObject(key, value);
-    //    System.out.printf("postCacheToRedis, key = %s, value = %s%n", key, value);
-    //    return "ok";
-    //  }
-    //
-    //  @PostMapping("/redis-test/cache/key")
-    //  public String getCacheToRedis(@RequestBody TestJsonEntity json) throws IOException {
-    //    RedissonCache cache = new RedissonCache("myCache");
-    //    cache.setRedissonConfig("redisson.xml");
-    //    String key = json.geKey();
-    //    String value = (String) cache.getObject(key);
-    //    System.out.printf("getCacheToRedis, key = %s, value = %s%n", key, value);
-    //    return value;
-    //  }
 
     private RedissonClient getRedissonClient() throws IOException {
         ResourceLoader loader = new DefaultResourceLoader();
