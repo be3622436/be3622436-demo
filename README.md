@@ -62,7 +62,8 @@ project root / 專案根目錄
     - Insert message to board via `RocketMQ` producer and consumer
     - Implement cloud config update and read via config server and remote `git` repository
     - Simple admin-server and admin-client function
-    - Secure with JWT and user role privilege
+    - Secure with JWT and user role privilege (spring-boot-security-jwt project)
+    - Simple `Websocket` with `STOMP` implementation (spring-boot-websocket-example project)
 - 簡述
     - 實作數據模型定義，和增刪查改
     - 使用者登入及註冊功能
@@ -75,7 +76,8 @@ project root / 專案根目錄
     - 由`RocketMQ`生產者、消費者方式來處理留言板訊息插入至資料庫
     - 藉由遠端`git`倉儲庫來實作雲端設定檔參數更新及讀取
     - 簡易監控管理服務端和客戶端功能
-    - 藉由JWT和角色權限實作資安防護
+    - 藉由JWT和角色權限實作資安防護 (在spring-boot-security-jwt專案中)
+    - 簡易`Websocket`和`STOMP`實作 (在spring-boot-websocket-example專案中)
 
 # Done / 已實作
 
@@ -107,6 +109,8 @@ project root / 專案根目錄
     - Unit-test
       - Login test without starting server
         - ex: `WebMvcTest`, `MockBean`
+- Websocket - https://github.com/be3622436/spring-boot-websocket-example
+  - communication by `STOMP`
 - Message Queue
     - RocketMQ
         - Producer
