@@ -1,25 +1,31 @@
 # Krace-demo
 
-- Spring Boot with third-party tech demo
-- 使用Spring Boot及第三方套件，做簡易範例，練習展示用
+- Spring Boot with third-party tech demo, just for framework and tech practice
+- 使用Spring Boot及第三方套件，做簡易範例，框架技術摸索、練習展示用
 
 ---
 
 # Tech Stack / 技術棧
 
-- Server Framework / 服務端框架
-    - Spring Boot
-        - mybatis
-        - swagger
-        - poi
-        - spring-cloud-config
-        - dom4j
-        - redisson
+- Server Framework / 服務器端框架
+  - Spring Boot
+    - Target / 目標清單
+      - mybatis
+      - swagger
+      - poi
+      - spring-cloud-config
+      - dom4j
+      - redisson
+    - Extra / 其他
+      - Spring Security
+      - JWT
+      - Websocket
 - Data Storage / 資料儲存體
-    - RocketMQ
-    - Redis
-    - MongoDB
-    - MySQL
+  - Target / 目標清單
+      - RocketMQ
+      - Redis
+      - MongoDB
+      - MySQL
 
 # Directory Structure / 目錄結構
 
@@ -85,10 +91,13 @@ project root / 專案根目錄
     - Controller
     - RestController
         - Basic CRUD
-            - ex: User account register
+            - ex: User register
 - Data Model
     - MyBaits + Mysql
-      - ex: Entity `User` mapping with mysql table `users`
+      - Entity code and `XML` document defined
+        - ex: Entity `User` mapping with mysql table `users`
+      - Entity association defined
+        - ex: Entity `UserInfo` (one to one)
     - MongoDB - https://github.com/be3622436/spring-boot-security-jwt
       - ex: `UserRepository` implement by `MongoRepository`
 - AOP
@@ -138,7 +147,7 @@ project root / 專案根目錄
     - Distributed and scalable microservice design
     - Data stable consistency and high availability
 - Other
-    - Spring framework tech and concept study
+    - Spring framework core tech and concept study
     - Third-party package detailed functions study
 
 - 主題
@@ -148,7 +157,7 @@ project root / 專案根目錄
     - 分散式及高擴展性的微服務設計
     - 數據操作的一致性和高可用性
 - 其他
-    - Spring框架的技術及概念研究
+    - Spring框架底層核心的技術及概念探索
     - 第三方套件的細節摸索
 
 ---
