@@ -1,6 +1,7 @@
 package com.example.kracedemo.service.impl;
 
 import com.example.kracedemo.entity.mysql.User;
+import com.example.kracedemo.entity.mysql.UserInfo;
 import com.example.kracedemo.mapper.UserMapper;
 import com.example.kracedemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public void insertUserList(List<User> userList) {
         userMapper.insertUserList(userList);
+    }
+
+    @Override
+    public UserInfo findWithInfoById(Long id) {
+        return userMapper.findWithInfoById(id);
     }
 
     @Override

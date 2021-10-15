@@ -1,7 +1,11 @@
 package com.example.kracedemo.controller.api.v1;
 
 import com.example.kracedemo.entity.Response;
+import com.example.kracedemo.entity.mysql.Role;
 import com.example.kracedemo.entity.mysql.User;
+import com.example.kracedemo.entity.mysql.UserInfo;
+import com.example.kracedemo.entity.mysql.UserRole;
+import com.example.kracedemo.service.UserRoleService;
 import com.example.kracedemo.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -22,6 +26,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UserRoleService userRoleService;
 
     @GetMapping("/findAll")
     public List<User> findAll() {
@@ -69,4 +76,20 @@ public class UserController {
         userService.insertUserList(userList);
         return new Response(200, "generateRandomUsers success");
     }
+
+    @GetMapping("/{userId}/info")
+    public UserInfo getUserInfoByUserId(@PathVariable Long userId) {
+        return userService.findWithInfoById(userId);
+    }
+
+    @GetMapping("/getUserRole/{userId}")
+    public List<Role> getUserRoleByUserId(@PathVariable Integer userId) {
+        return userRoleService.findRolesByUserId(userId);
+    }
+
+    @GetMapping("/getUserRole/all")
+    public List<UserRole> getUserRoleAll() {
+        return userRoleService.findAll();
+    }
+
 }

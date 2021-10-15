@@ -1,6 +1,7 @@
 package com.example.kracedemo.mapper;
 
 import com.example.kracedemo.entity.mysql.User;
+import com.example.kracedemo.entity.mysql.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -11,6 +12,8 @@ public interface UserMapper {
     List<User> findAll();
 
     User findById(Long id);
+
+    UserInfo findWithInfoById(Long id);
 
     Long create(User user);
 

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.kracedemo.mapper.UserRoleMapper">
+
+<!--    one to one, only for test -->
+    <resultMap id="UserRoleResultMap" type="com.example.kracedemo.entity.mysql.UserRole">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="username" jdbcType="CHAR" property="username"/>
+        <result column="password" jdbcType="CHAR" property="password"/>
+        <association property="role" javaType="com.example.kracedemo.entity.mysql.Role">
+            <id column="role_id" jdbcType="INTEGER" property="id"/>
+            <result column="name" jdbcType="CHAR" property="name"/>
+        </association>
+    </resultMap>
+
+    <select id="findAll" resultMap="UserRoleResultMap">
+        SELECT
+        T2.id,
+        T2.username,
+        T2.password,
+        T3.id role_id,
+        T3.name
+        FROM user_role T1, user T2, role T3
+        WHERE T1.user_id = T2.id
+        AND T1.role_id = T3.id
+    </select>
+
+    <select id="findRolesByUserId" resultType="com.example.kracedemo.entity.mysql.Role">
+        SELECT T2.*
+        FROM user_role T1, role T2
+        WHERE T1.user_id = #{userId}
+        AND T1.role_id = T2.id
+    </select>
+</mapper>

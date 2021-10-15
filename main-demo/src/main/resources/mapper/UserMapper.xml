@@ -12,6 +12,16 @@
         WHERE id = #{id}
     </select>
 
+    <select id="findWithInfoById" resultType="com.example.kracedemo.entity.mysql.UserInfo">
+        SELECT
+        T1.*,
+        T2.email,
+        T2.sex
+        FROM user T1, user_info T2
+        WHERE T1.id = #{id}
+        AND T1.id = T2.user_id
+    </select>
+
     <insert id="create" parameterType="com.example.kracedemo.entity.mysql.User">
         INSERT INTO user(username, password)
         VALUES (#{username}, #{password});
