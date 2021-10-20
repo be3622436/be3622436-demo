@@ -78,4 +78,10 @@ public class TestController {
         userService.tranTest(throwErr);
         return "ok";
     }
+
+    @GetMapping("/tran-test-v2")
+    public String tranTestV2() {
+        userService.tranTestV2();
+        return "ok";
+    }
 }

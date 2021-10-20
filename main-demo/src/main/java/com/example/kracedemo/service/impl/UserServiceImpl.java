@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import java.util.List;
@@ -62,6 +64,7 @@ public class UserServiceImpl implements UserService {
         return userMapper.findByName(name);
     }
 
+
     @Override
     public void tranTest(boolean throwErr) {
         TransactionStatus txStatus = transactionManager.getTransaction(new DefaultTransactionDefinition());
@@ -73,7 +76,13 @@ public class UserServiceImpl implements UserService {
           transactionManager.commit(txStatus);
         } catch (Exception e) {
           transactionManager.rollback(txStatus);
-//          throw e;
         }
+    }
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    @Override
+    public void tranTestV2() {
+        userMapper.create(new User("vesta2", "argon2"));
+        throw new RuntimeException("tranTestV2 throw new RuntimeException");
     }
 }

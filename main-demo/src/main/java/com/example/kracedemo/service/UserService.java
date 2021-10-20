@@ -10,4 +10,5 @@ public interface UserService extends BaseService<User> {
     void insertUserList(List<User> userList);
     UserInfo findWithInfoById(Long id);
     void tranTest(boolean throwErr);
+    void tranTestV2();
 }
