@@ -99,7 +99,7 @@ project root / 專案根目錄
       - Entity association defined
         - ex: Entity `UserInfo` (one to one)
       - Simple transaction process
-        - ex: `PlatformTransactionManager`
+        - ex: `PlatformTransactionManager`, `@Transactional`
     - MongoDB - https://github.com/be3622436/spring-boot-security-jwt
       - ex: `UserRepository` implement by `MongoRepository`
 - AOP
