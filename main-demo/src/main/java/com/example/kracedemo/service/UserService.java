@@ -9,4 +9,5 @@ public interface UserService extends BaseService<User> {
     User findByName(String name);
     void insertUserList(List<User> userList);
     UserInfo findWithInfoById(Long id);
+    void tranTest(boolean throwErr);
 }

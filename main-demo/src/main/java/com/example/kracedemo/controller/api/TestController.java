@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/test")
@@ -69,5 +70,12 @@ public class TestController {
         Config config = Config.fromYAML(resource.getInputStream());
         config.useClusterServers();
         return Redisson.create(config);
+    }
+
+    @GetMapping("/tran-test/{text}")
+    public String tranTest(@PathVariable String text) {
+        boolean throwErr = Objects.equals(text, "throw-error");
+        userService.tranTest(throwErr);
+        return "ok";
     }
 }

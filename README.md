@@ -98,6 +98,8 @@ project root / 專案根目錄
         - ex: Entity `User` mapping with mysql table `users`
       - Entity association defined
         - ex: Entity `UserInfo` (one to one)
+      - Simple transaction process
+        - ex: `PlatformTransactionManager`
     - MongoDB - https://github.com/be3622436/spring-boot-security-jwt
       - ex: `UserRepository` implement by `MongoRepository`
 - AOP

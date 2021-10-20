@@ -6,6 +6,9 @@ import com.example.kracedemo.mapper.UserMapper;
 import com.example.kracedemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import java.util.List;
 
@@ -13,6 +16,9 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private PlatformTransactionManager transactionManager;
 
     @Override
     public List<User> findAll() {
@@ -54,5 +60,20 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByName(String name) {
         return userMapper.findByName(name);
+    }
+
+    @Override
+    public void tranTest(boolean throwErr) {
+        TransactionStatus txStatus = transactionManager.getTransaction(new DefaultTransactionDefinition());
+        try {
+          userMapper.create(new User("vesta", "argon"));
+          if (throwErr) {
+              throw new Exception("tranTest throw new Exception");
+          }
+          transactionManager.commit(txStatus);
+        } catch (Exception e) {
+          transactionManager.rollback(txStatus);
+//          throw e;
+        }
     }
 }
